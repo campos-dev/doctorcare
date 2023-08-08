@@ -1,3 +1,5 @@
+const navigation = document.querySelector("#navigation");
+
 window.addEventListener("scroll", onScroll);
 onScroll();
 
@@ -31,10 +33,12 @@ function activateMenuAtCurrentSection(section) {
 }
 
 function showNavOnScroll() {
-  if (scrollY > 0) {
-    navigation.classList.add("scroll");
-  } else {
-    navigation.classList.remove("scroll");
+  if (navigation) {
+    if (scrollY > 0) {
+      navigation.classList.add("scroll");
+    } else {
+      navigation.classList.remove("scroll");
+    }
   }
 }
 
